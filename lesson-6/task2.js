@@ -12,12 +12,20 @@ const isAdult = (age) => {
         console.log(`${age} - Incorrect value`);
         return false;
     }
+
     if (age <= 0 || age > 120) {
         console.log(`${age} - Incorrect number`);
         return false;
     }
-    if (age >=18 ? console.log(`${age} - Adult person`) : console.log(`${age} - Still a child`)) {
-        return age >= 18;
+
+    if (age >= 18 && age <= 120) {
+        console.log(`${age} - Adult person`);
+        return true;
+    }
+
+    if (age < 18) {
+        console.log(`${age} - Still a child`);
+        return false;
     }
     else {
         console.log(`${age} - (!) Incorrect value`);
@@ -25,7 +33,6 @@ const isAdult = (age) => {
     }
 }
 
-console.log(typeof isAdult());
 isAdult(25);
 isAdult(15);
 isAdult(0);

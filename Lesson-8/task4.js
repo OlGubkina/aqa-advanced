@@ -12,6 +12,7 @@ let numbers2 = [];
 
 numbers.forEach((number) => {
     if (number%2 === 0) numbers2.push(number);
+    // numbers.filter (number => number%2 === 0);
 });
 
 console.log(`Source array: ${numbers}

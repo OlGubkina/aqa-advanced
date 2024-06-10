@@ -41,20 +41,15 @@ const eBook4 = new EBook("BookName","BookAuthor",2000,"pdf");
 
 let arrayOfBooks = [book1, book2, book3, eBook4];
 
-const oldestBook = (inputArray) => {
-    const sortedArray = inputArray.sort((book1, book2) => book1.year > book2.year ? 1 : -1);
-    return sortedArray[0];
-}
-
-//console.log(oldestBook(arrayOfBooks));
+console.log(Book.oldestBook(arrayOfBooks));
 
 const bookToEbook = (book, fileFormat) => {
-    const neweBook = new EBook();
-    neweBook.name = book.name;
-    neweBook.author = book.author;
-    neweBook.year = book.year;
-    neweBook.fileFormat = fileFormat;
-    return neweBook;
+    const newEBook = new EBook();
+    newEBook.name = book.name;
+    newEBook.author = book.author;
+    newEBook.year = book.year;
+    newEBook.fileFormat = fileFormat;
+    return newEBook;
 }
 
 console.log(bookToEbook(book1, "pdf"));
@@ -62,4 +57,4 @@ console.log(bookToEbook(book1, "pdf"));
 //?
 const value = "pdf"
 console.log(typeof(value))
-console.log(typeof(value) === String)
+console.log(typeof(value) === "string")

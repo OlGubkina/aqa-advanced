@@ -1,8 +1,8 @@
 export class Book {
     constructor (name, author, year) {
-        this.name = name;
-        this.author = author;
-        this.year = year;
+        this._name = name;
+        this._author = author;
+        this._year = year;
     }
 
     get name() {
@@ -40,10 +40,6 @@ export class Book {
     }
 
     static oldestBook = (inputArray) => {
-        const sortedArray = inputArray.sort((book1, book2) => book1.year > book2.year ? 1 : -1);
-        return sortedArray[0];
+        return inputArray.sort((book1, book2) => book1.year > book2.year ? 1 : -1)[0];
     }
 }
-
-const errorBook = new Book(1,2, "o"); //Создастся пустой объект?
-console.log(errorBook);

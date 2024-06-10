@@ -24,21 +24,37 @@
     .catch((error) => console.log(error))
 */
 
+/* Classwork
 
+ */
 
-
-
-let first10planets = [];
+let promisesArray = [];
 
 console.time('promiseAll')
 
-for (let i = 1; i <= 10; i++) {
-    let data = await fetch (`https://swapi.dev/api/planets/${i}`)
-    let body = await data.json()
-    first10planets.push(body.name)
+for (let i = 1; i < 6; i++) {
+    promisesArray.push(fetch(`https://swapi.dev/api/planets/${i}`)
+        .then((res) => res.json())
+        .then((json) => json.name)
+    )
 }
 
-const result = await Promise.all(promisesArray)
+
+const result = await
+
+
+
+    //let first10planets = [];
+
+
+
+// for (let i = 1; i < 10; i++) {
+//     let data = await fetch (`https://swapi.dev/api/planets/${i}`)
+//     let body = await data.json()
+//     first10planets.push(body.name)
+// }
+
+//const result = await Promise.all(promisesArray)
 console.log(first10planets)
 
 

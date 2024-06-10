@@ -31,30 +31,19 @@ const book1 = new Book("Pet Sematary", "Stephen King", 1983);
 const book2 = new Book("It", "Stephen King", 1985);
 const book3 = new Book("The Green Mile", "Stephen King", 1986);
 
-// book1.printInfo();
-// book2.printInfo();
-// book3.printInfo();
+book1.printInfo();
+book2.printInfo();
+book3.printInfo();
 
 const eBook4 = new EBook("BookName","BookAuthor",2000,"pdf");
 
-// eBook4.printInfo();
+eBook4.printInfo();
 
 let arrayOfBooks = [book1, book2, book3, eBook4];
 
-console.log(Book.oldestBook(arrayOfBooks));
+console.log('The oldest book is: ' + Book.oldestBook(arrayOfBooks).name);
 
-const bookToEbook = (book, fileFormat) => {
-    const newEBook = new EBook();
-    newEBook.name = book.name;
-    newEBook.author = book.author;
-    newEBook.year = book.year;
-    newEBook.fileFormat = fileFormat;
-    return newEBook;
-}
+console.log(EBook.convertBookToEbook(book3, "epub"))
 
-console.log(bookToEbook(book1, "pdf"));
-
-//?
-const value = "pdf"
-console.log(typeof(value))
-console.log(typeof(value) === "string")
+const errorBook = new Book(1,2, "o");
+console.log(errorBook);

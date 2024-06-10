@@ -3,7 +3,7 @@ import {Book} from "./Book.js";
 export class EBook extends Book {
     constructor(name, author, year, fileFormat) {
         super(name, author, year);
-        this.fileFormat = fileFormat
+        this._fileFormat = fileFormat
     }
 
     get fileFormat() {
@@ -11,7 +11,8 @@ export class EBook extends Book {
     }
 
     set fileFormat(value) {
-        return this._fileFormat = value
+        if (typeof(value) === "number") return this._fileFormat = value
+        else return console.log(`Error: fileFormat is not a string`)
     }
 
     printInfo() {
@@ -22,4 +23,9 @@ export class EBook extends Book {
             Book's format: ${this.fileFormat}
        ***`)
     }
+
+    static convertBookToEbook = (Book, fileFormat) => {
+        return new EBook(Book.name, Book.author, Book.year, fileFormat);
+    }
 }
+

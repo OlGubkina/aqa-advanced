@@ -21,6 +21,8 @@ npx prettier . --write          запуск притиера, пройдёт п
 https://eslint.org/
 npm init @eslint/config@latest
 
+npm uninstall eslint
+
 npx eslint . --fix
 
 
@@ -53,3 +55,7 @@ npm install husky
 
 .husky\pre-commit содержит команду npm run lint
 где lint - имя скрипта из package.json\scripts
+
+
+>>>>>
+git commit -m 'This command ignores husky ' --no-verify

@@ -19,11 +19,14 @@ let zeroCount = 0;
 
 numbers.forEach((number) => {
 	try {
-		if (number === Infinity || number === -Infinity || number === null || number === false)
-			{throw `${number} >>> Not a number`;}
-		else if (!isNaN(number)) {
-			if (number === 0) {zeroCount++;}
-			else {number > 0 ? positiveCount++ : negativeCount++;}
+		if (number === Infinity || number === -Infinity || number === null || number === false) {
+			throw `${number} >>> Not a number`;
+		} else if (!isNaN(number)) {
+			if (number === 0) {
+				zeroCount++;
+			} else {
+				number > 0 ? positiveCount++ : negativeCount++;
+			}
 		}
 	} catch (e) {
 		console.log(`Caught the error! >>> ${e}`);

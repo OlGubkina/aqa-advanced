@@ -27,4 +27,6 @@ if (averageGrade < 60) {
 	console.log("Very good");
 } else if (averageGrade > 90 && averageGrade <= 100) {
 	console.log("Excellent");
-} else {console.log(`Error: averageGrade = ${averageGrade}`);}
+} else {
+	console.log(`Error: averageGrade = ${averageGrade}`);
+}

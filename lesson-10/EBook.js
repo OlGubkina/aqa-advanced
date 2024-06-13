@@ -11,8 +11,11 @@ export class EBook extends Book {
 	}
 
 	set fileFormat(value) {
-		if (typeof value === "number") {this._fileFormat = value;}
-		else {console.log("Error: fileFormat is not a string");}
+		if (typeof value === "number") {
+			this._fileFormat = value;
+		} else {
+			console.log("Error: fileFormat is not a string");
+		}
 	}
 
 	printInfo() {

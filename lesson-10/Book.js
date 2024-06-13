@@ -18,18 +18,27 @@ export class Book {
 	}
 
 	set name(value) {
-		if (typeof value === "string") {this._name = value;}
-		else {console.log("Error: name is not a string");}
+		if (typeof value === "string") {
+			this._name = value;
+		} else {
+			console.log("Error: name is not a string");
+		}
 	}
 
 	set author(value) {
-		if (typeof value === "string") {this._author = value;}
-		else {console.log("Error: author is not a string");}
+		if (typeof value === "string") {
+			this._author = value;
+		} else {
+			console.log("Error: author is not a string");
+		}
 	}
 
 	set year(value) {
-		if (typeof value === "number") {this._year = value;}
-		else {console.log("Error: year is not a number");}
+		if (typeof value === "number") {
+			this._year = value;
+		} else {
+			console.log("Error: year is not a number");
+		}
 	}
 
 	printInfo() {

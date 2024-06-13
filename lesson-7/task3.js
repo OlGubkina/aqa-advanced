@@ -16,8 +16,12 @@
 
 const divide = (numerator, denominator) => {
 	try {
-		if (denominator === 0 || denominator === null || denominator === undefined) {throw "Impossible to divide";}
-		if (isNaN(numerator) || isNaN(denominator)) {throw "Not a numbers were used!";}
+		if (denominator === 0 || denominator === null || denominator === undefined) {
+			throw "Impossible to divide";
+		}
+		if (isNaN(numerator) || isNaN(denominator)) {
+			throw "Not a numbers were used!";
+		}
 		console.log(`${numerator} / ${denominator} = ${numerator / denominator}`);
 		return numerator / denominator;
 	} catch (e) {

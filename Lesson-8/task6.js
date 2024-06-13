@@ -11,9 +11,9 @@ console.log(`Array: ${numbersList}`);
 let sortedNumbersList = numbersList.sort(compare);
 
 function compare(a, b) {
-	if (a < b) return -1;
-	if (a > b) return 1;
-	else return 0;
+	if (a < b) {return -1;}
+	if (a > b) {return 1;}
+	else {return 0;}
 }
 
 console.log(`Sorted array: ${sortedNumbersList}`);

@@ -9,8 +9,8 @@
  */
 
 const book = {
-	title: 'Jungle book',
-	author: 'Rudyard Kipling',
+	title: "Jungle book",
+	author: "Rudyard Kipling",
 	year: 1984,
 };
 

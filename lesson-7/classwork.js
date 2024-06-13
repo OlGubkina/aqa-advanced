@@ -13,7 +13,7 @@ person.surname = "Anderson"; // можно добавить свойство о�
 // HOF - Higher-ordered Functions - это функция, в которую мы передаём callback
 
 function callback() {
-	console.log(`callB function`);
+	console.log("callB function");
 }
 
 function someF(callBackArgument) {

@@ -14,15 +14,15 @@
 */
 
 const car1 = {
-	brand: 'BMW',
-	model: 'x5',
+	brand: "BMW",
+	model: "x5",
 	year: 2000,
 };
 
 const car2 = {
-	brand: 'Suzuki',
-	model: 'Jimny',
-	owner: 'Anna Rivera',
+	brand: "Suzuki",
+	model: "Jimny",
+	owner: "Anna Rivera",
 };
 
 // Если у ключей одинаковое имя, то в общем объекте будут использованы значения, добавленные последними

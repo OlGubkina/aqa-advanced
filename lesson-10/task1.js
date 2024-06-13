@@ -24,26 +24,26 @@
     і формат файлу як рядок **** та повертати екземпляр класу EBook
  */
 
-import { Book } from './Book.js';
-import { EBook } from './EBook.js';
+import { Book } from "./Book.js";
+import { EBook } from "./EBook.js";
 
-const book1 = new Book('Pet Sematary', 'Stephen King', 1983);
-const book2 = new Book('It', 'Stephen King', 1985);
-const book3 = new Book('The Green Mile', 'Stephen King', 1986);
+const book1 = new Book("Pet Sematary", "Stephen King", 1983);
+const book2 = new Book("It", "Stephen King", 1985);
+const book3 = new Book("The Green Mile", "Stephen King", 1986);
 
 book1.printInfo();
 book2.printInfo();
 book3.printInfo();
 
-const eBook4 = new EBook('BookName', 'BookAuthor', 2000, 'pdf');
+const eBook4 = new EBook("BookName", "BookAuthor", 2000, "pdf");
 
 eBook4.printInfo();
 
 let arrayOfBooks = [book1, book2, book3, eBook4];
 
-console.log('The oldest book is: ' + Book.oldestBook(arrayOfBooks).name);
+console.log("The oldest book is: " + Book.oldestBook(arrayOfBooks).name);
 
-console.log(EBook.convertBookToEbook(book3, 'epub'));
+console.log(EBook.convertBookToEbook(book3, "epub"));
 
-const errorBook = new Book(1, 2, 'o');
+const errorBook = new Book(1, 2, "o");
 console.log(errorBook);

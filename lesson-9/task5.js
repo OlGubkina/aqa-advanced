@@ -5,10 +5,10 @@
 */
 
 const users = [
-	{ firstName: 'Alice', lastName: 'Anderson', age: 20, email: 'alice@gmail.com' },
-	{ firstName: 'Bob', lastName: 'Anderson', age: 22, email: 'bob@gmail.com' },
-	{ firstName: 'Anna', lastName: 'Anderson', age: 25, email: 'anna@gmail.com' },
-	{ firstName: 'Alex', lastName: 'Anderson', age: 45, email: 'alex@gmail.com' },
+	{ firstName: "Alice", lastName: "Anderson", age: 20, email: "alice@gmail.com" },
+	{ firstName: "Bob", lastName: "Anderson", age: 22, email: "bob@gmail.com" },
+	{ firstName: "Anna", lastName: "Anderson", age: 25, email: "anna@gmail.com" },
+	{ firstName: "Alex", lastName: "Anderson", age: 45, email: "alex@gmail.com" },
 ];
 
 for (const { firstName, lastName, age, email } of users) {

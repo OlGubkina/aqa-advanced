@@ -6,8 +6,8 @@
 Потім використайте шаблонний рядок для створення того ж вітання. Виведіть результат в консоль.
  */
 
-let name1 = 'Olga';
-let name2 = 'Mari';
+let name1 = "Olga";
+let name2 = "Mari";
 
-console.log('Welcome ' + name1 + ' and ' + name2);
+console.log("Welcome " + name1 + " and " + name2);
 console.log(`Welcome ${name1} and ${name2}`);

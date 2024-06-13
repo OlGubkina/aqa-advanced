@@ -4,7 +4,7 @@
 Присвойте їм значення та виведіть кожну змінну на консоль.
  */
 
-let stringa = 'Some string';
+let stringa = "Some string";
 let number = 10;
 let isAdmin = true;
 let nullVariable = null;

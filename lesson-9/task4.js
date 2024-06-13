@@ -9,13 +9,13 @@
     Виведіть оновлений об'єкт person в консоль.
 */
 
-    const person = {
-        firstName: 'Steve',
-        lastName: 'Jobs',
-        age: 56
-    }
+const person = {
+	firstName: 'Steve',
+	lastName: 'Jobs',
+	age: 56,
+};
 
-    person.email = 'steve@apple.com';
-    delete person.age;
+person.email = 'steve@apple.com';
+delete person.age;
 
-    console.log(person);
+console.log(person);

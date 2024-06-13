@@ -10,4 +10,4 @@ let isAdult = false;
 
 isAdult = ageOfPerson >= 18; // => isAdult = ageOfPerson>=18 ? true : false;
 
-console.log(`Age: ${ageOfPerson} => ${isAdult? "Adult" : "Kid"}`);
+console.log(`Age: ${ageOfPerson} => ${isAdult ? 'Adult' : 'Kid'}`);

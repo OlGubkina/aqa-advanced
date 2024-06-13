@@ -14,18 +14,17 @@
 */
 
 const car1 = {
-    brand: 'BMW',
-    model: 'x5',
-    year: 2000
-}
+	brand: 'BMW',
+	model: 'x5',
+	year: 2000,
+};
 
 const car2 = {
-    brand: 'Suzuki',
-    model: 'Jimny',
-    owner: 'Anna Rivera'
-
-}
+	brand: 'Suzuki',
+	model: 'Jimny',
+	owner: 'Anna Rivera',
+};
 
 // Если у ключей одинаковое имя, то в общем объекте будут использованы значения, добавленные последними
-const car3 = {...car1,...car2}
-console.log(car3) //{ brand: 'Suzuki', model: 'Jimny', year: 2000, owner: 'Anna Rivera' }
+const car3 = { ...car1, ...car2 };
+console.log(car3); //{ brand: 'Suzuki', model: 'Jimny', year: 2000, owner: 'Anna Rivera' }

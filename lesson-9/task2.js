@@ -9,19 +9,13 @@
  */
 
 const book = {
-    title: 'Jungle book',
-    author: 'Rudyard Kipling',
-    year: 1984
-    }
+	title: 'Jungle book',
+	author: 'Rudyard Kipling',
+	year: 1984,
+};
 
 // Деструктуризация - способ получить свойства объекта и присвоить их переменным
-const {title, author} = book;
+const { title, author } = book;
 
 console.log(`Название книги: ${title}`);
 console.log(`Автор книги: ${author}`);
-
-
-
-
-
-

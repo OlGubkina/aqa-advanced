@@ -1,0 +1,36 @@
+-==Prettier==-
+
+prettier.js
+https://prettier.io/docs/en/install
+npm install --save-dev --save-exact prettier
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"        создаёт файл для конфигурации
+
+npx prettier . --write          запуск притиера, пройдёт по всем файлам проекта
+
+	"singleQuote": true,            true='a' false = "a"
+	"semi": true,                   Добавлять ; в конец каждой строки
+	"bracketSpacing": true,         Добавляет пробелы { a }
+	"useTabs": true,                Добавлять таб как отступ
+	"printWidth": 120,              Длина строки
+	"trailingComma": "all",         Добавляет , к объектам                      "all" | "none"
+	"arrowParens": "avoid"          Удаляет скобки в стрелочных Ф если аргумент один
+
+
+
+-==ESLint==-
+https://eslint.org/
+npm init @eslint/config@latest
+
+npx eslint . --fix
+
+-==Husky==-
+прекондишн перед коммитом
+npx husky init
+npm install husky
+
+папка .husky должна быть в гите
+
+"lint": "npx eslint . --fix"
+
+.husky\pre-commit содержит команду npm run lint
+где lint - имя скрипта из package.json\scripts

@@ -7,11 +7,11 @@
 */
 
 const recFunction = (num) => {
-    if (num <= 0) return 1
-    else {
-        console.log(num);
-        recFunction(num-1)
-    }
-}
+	if (num <= 0) return 1;
+	else {
+		console.log(num);
+		recFunction(num - 1);
+	}
+};
 
 recFunction(5);

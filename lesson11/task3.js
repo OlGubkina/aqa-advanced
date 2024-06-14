@@ -1,10 +1,9 @@
 /* 3 Зібрати в масив назви всіх резидентів "residents",
-з усіх планет що були у фільмі "Return of the Jedi" (id = 3) */
-/*{
-	planetName: 'SomePlanet1',
+		з усіх планет що були у фільмі "Return of the Jedi" (id = 3)
+		planetName: 'SomePlanet1',
 		residents: ['Han Solo', 'r2d2']
-},
 */
+
 class objPlanetResidents {
 	constructor(planetName, residents) {
 		this.planetName = planetName;
@@ -32,7 +31,6 @@ for (let i = 0; i < planets.length; i++) {
 	planetsNames.push(body.name);
 	finalArray[i] = new objPlanetResidents(planetsNames[i], null);
 }
-//console.log(finalArray); // планеты есть, резидентов нет
 
 // Иду по планетам, нахожу резидентов
 let newArray = [];
@@ -41,11 +39,7 @@ for (let i = 0; i < planets.length; i++) {
 	let planetBody = await planet.json();
 	newArray.push(planetBody.residents);
 }
-//console.log(newArray);
-//console.log(newArray.length); //=5
 
-let arrayIDresidents = [];
-let result = [[]];
 let iLoopTmp = [[]];
 let jLoopTmp = [];
 
@@ -55,10 +49,20 @@ for (let i = 0; i < newArray.length; i++) {
 		jLoopTmp.push(tmp[tmp.length - 2]);
 		//console.log(tmp); //[ 'https:', '', 'swapi.dev', 'api', 'people', '1', '' ]
 	}
-	console.log(`jLoop: ${jLoopTmp}`); // 1,2,4,6,7,8,9,11,43,62
-	//iLoopTmp.push(jLoopTmp); //Почему впереди запятая?
-	//console.log('iLoop:' + iLoopTmp);
 	iLoopTmp[i] = jLoopTmp;
 	jLoopTmp = [];
 }
-console.log('>>>iLoop:' + iLoopTmp);
+
+let arrayResidentsInside = [];
+
+for (let i = 0; i < iLoopTmp.length; i++) {
+	for (let j = 0; j < iLoopTmp[i].length; j++) {
+		let personData = await fetch(`https://swapi.dev/api/people/${iLoopTmp[i][j]}`);
+		let personBody = await personData.json();
+		arrayResidentsInside.push(personBody.name);
+	}
+	finalArray[i] = new objPlanetResidents(finalArray[i].planetName, arrayResidentsInside);
+	arrayResidentsInside = [];
+}
+
+console.log(finalArray);

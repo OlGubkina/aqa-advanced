@@ -1,0 +1,61 @@
+-==Prettier==-
+
+prettier.js
+https://prettier.io/docs/en/install
+npm install --save-dev --save-exact prettier
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"        создаёт файл для конфигурации
+
+npx prettier . --write          запуск притиера, пройдёт по всем файлам проекта
+
+	"singleQuote": true,            true='a' false = "a"
+	"semi": true,                   Добавлять ; в конец каждой строки
+	"bracketSpacing": true,         Добавляет пробелы { a }
+	"useTabs": true,                Добавлять таб как отступ
+	"printWidth": 120,              Длина строки
+	"trailingComma": "all",         Добавляет , к объектам          "all" | "none"
+	"arrowParens": "avoid"          Удаляет скобки в стрелочных Ф если аргумент один
+
+
+
+-==ESLint==-
+https://eslint.org/
+npm init @eslint/config@latest
+
+npm uninstall eslint
+
+npx eslint . --fix
+
+
+rules: {
+			                                        // "off" | "warn" | "error"
+			"no-unused-vars": "off",                // Запрещены неиспользуемые переменные
+			"no-undef": "error",                    // Запрещены undefined переменные
+			quotes: ["error", "double"],            // Разрешены только Двойные кавывчки
+			eqeqeq: "error",                        // Разрешены только ===
+			"no-redeclare": "error",                // NO let a, let a
+			camelcase: "error",                     // Разрешён только camelCase
+			curly: "error",                         // После if должны быть {}
+			"no-useless-assignment": "error",       // Assign but never use
+			"no-dupe-keys": "error",                // NO дубликаты ключей в объектах
+			"no-dupe-class-members": "error",       // NO Дубликаты классов
+			"no-constant-condition": "error",       // NO if(true)
+			"getter-return": "error",               // Любой getter доллжен что-то возвращать
+			"for-direction": "error",               // Запрет бесконечных циклов
+		},
+
+
+-==Husky==-
+прекондишн перед коммитом
+npx husky init
+npm install husky
+
+папка .husky должна быть в гите
+
+"lint": "npx eslint . --fix"
+
+.husky\pre-commit содержит команду npm run lint
+где lint - имя скрипта из package.json\scripts
+
+
+>>>>>
+git commit -m 'This command ignores husky ' --no-verify

@@ -5,11 +5,11 @@
     Використовуючи метод reduce, обчисліть суму всіх елементів масиву.
     Виведіть отриману суму на консоль.
  */
-    const numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 40, 50];
 
-    console.log(`Source array: ${numbers}`);
+console.log(`Source array: ${numbers}`);
 
-    console.log(`Sum of elements: ${numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}`);
-    // reduce. Переменная accumulator - сохраняется между итерациями,
-    // коллбэк выполняется для каждого элемента
-    // начальное значение для accumulator (необязательный параметр; 0 по дефолту)
+console.log(`Sum of elements: ${numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}`);
+// reduce. Переменная accumulator - сохраняется между итерациями,
+// коллбэк выполняется для каждого элемента
+// начальное значение для accumulator (необязательный параметр; 0 по дефолту)

@@ -10,11 +10,11 @@
     Виведіть об'єкт student в консоль.
 */
 
-    const student = {};
+const student = {};
 
-    student.firstName = 'Alex';
-    student.lastName = 'Anderson';
-    student.age = 55;
-    student.courses = ['En', 'Fr', 'Ua'];
+student.firstName = "Alex";
+student.lastName = "Anderson";
+student.age = 55;
+student.courses = ["En", "Fr", "Ua"];
 
-    console.log(student);
+console.log(student);

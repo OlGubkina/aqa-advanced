@@ -8,24 +8,24 @@
 
 /******* Function declaration ***************************************************/
 function rectangleAreaDeclaration(width, height) {
-    return console.log(`Rectangle's area = ${width * height}`);
-    //return width * height;
+	return console.log(`Rectangle's area = ${width * height}`);
+	//return width * height;
 }
-rectangleAreaDeclaration(5,10);
+rectangleAreaDeclaration(5, 10);
 
 /************ Function expression ***********************************************/
 // rectangleAreaExpression(5,10); - нельзя вызвать ф до её создания.
 // Can`t access before initialization
 
 const rectangleAreaExpression = function (width, height) {
-    console.log(`Rectangle's area = ${width * height}`);
-    return width * height;
-}
-rectangleAreaExpression(5,10);
+	console.log(`Rectangle's area = ${width * height}`);
+	return width * height;
+};
+rectangleAreaExpression(5, 10);
 
 /******************************* Arrow function *********************************/
 const rectangleAreaArrow = (width, height) => {
-    console.log(`Rectangle's area = ${width * height}`);
-    return width * height;
-}
-rectangleAreaArrow(5,10);
+	console.log(`Rectangle's area = ${width * height}`);
+	return width * height;
+};
+rectangleAreaArrow(5, 10);

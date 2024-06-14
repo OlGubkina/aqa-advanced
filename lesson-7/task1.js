@@ -12,16 +12,17 @@
 */
 
 const handleNum = (inputNumber, handleEven, handleOdd) => {
-    return inputNumber % 2 === 0 ? handleEven(inputNumber) : handleOdd(inputNumber);
-}
+	return inputNumber % 2 === 0 ? handleEven(inputNumber) : handleOdd(inputNumber);
+};
 
-const handleEven = (inputNumber) => { // Чётное число
-    console.log(`${inputNumber} - number is even`)
-}
+const handleEven = (inputNumber) => {
+	// Чётное число
+	console.log(`${inputNumber} - number is even`);
+};
 
 const handleOdd = (inputNumber) => {
-    console.log(`${inputNumber} - number is odd`)
-}
+	console.log(`${inputNumber} - number is odd`);
+};
 
 handleNum(10, handleEven, handleOdd);
 handleNum(11, handleEven, handleOdd);

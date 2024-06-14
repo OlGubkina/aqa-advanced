@@ -9,7 +9,7 @@
 const firstArray = [1, 2, 3];
 const secondArray = [4, 5, 6];
 
-const thirdArray = [...firstArray,...secondArray];
+const thirdArray = [...firstArray, ...secondArray];
 
 console.log(`first array: ${firstArray}
 second aray: ${secondArray}

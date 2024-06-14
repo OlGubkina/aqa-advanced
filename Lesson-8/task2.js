@@ -7,9 +7,10 @@
     Виведіть новий масив на консоль.
  */
 
-    const array = [1, 2, 3, 4, 5];
-    let array2 = [];
-    array2 = array.map((index) => array[index-1] * (index-1)); //index-1 *
+const array = [1, 2, 3, 4, 5];
+//let array2 = [];
 
-    console.log(`Source array: ${array}
+let array2 = array.map((index) => array[index - 1] * (index - 1)); //index-1 *
+
+console.log(`Source array: ${array}
     >Array 2: ${array2}`);

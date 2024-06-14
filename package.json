@@ -1,18 +1,25 @@
 {
-  "name": "aqa-advanced",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^5.3.0"
-  },
-  "type": "module",
-  "devDependencies": {
-    "prettier": "3.3.1"
-  }
+	"name": "aqa-advanced",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky",
+		"lint": "npx eslint . --fix",
+		"prittier": "npx prettier . --write"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"husky": "^9.0.11"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@eslint/js": "^9.4.0",
+		"eslint": "^9.4.0",
+		"globals": "^15.4.0",
+		"prettier": "3.3.2"
+	}
 }

@@ -10,27 +10,30 @@
     Після завершення циклу виведіть значення змінних positiveCount, negativeCount та zeroCount на консоль.
 */
 
-   // const numbers = [2, -5, 0, 7, -3, 0, 10, -8];
-    const numbers = [2, -5, 0, 'a', "str", undefined, -Infinity, null, Infinity, false,
-    3, 5, 6, 8, -7, -8, -9, 0, 0, 0];
+// const numbers = [2, -5, 0, 7, -3, 0, 10, -8];
+const numbers = [2, -5, 0, "a", "str", undefined, -Infinity, null, Infinity, false, 3, 5, 6, 8, -7, -8, -9, 0, 0, 0];
 
-    let positiveCount = 0;
-    let negativeCount = 0;
-    let zeroCount = 0;
+let positiveCount = 0;
+let negativeCount = 0;
+let zeroCount = 0;
 
-    numbers.forEach((number) => {
-        try {
-            if (number === Infinity || number === -Infinity ||
-                number === null || number === false) throw `${number} >>> Not a number`
-            else if (!isNaN(number)) {
-                if (number === 0) zeroCount++;
-                else number > 0 ? positiveCount++ : negativeCount++
-            }
-        }
-        catch (e) {console.log(`Caught the error! >>> ${e}`);}
-        });
+numbers.forEach((number) => {
+	try {
+		if (number === Infinity || number === -Infinity || number === null || number === false) {
+			throw `${number} >>> Not a number`;
+		} else if (!isNaN(number)) {
+			if (number === 0) {
+				zeroCount++;
+			} else {
+				number > 0 ? positiveCount++ : negativeCount++;
+			}
+		}
+	} catch (e) {
+		console.log(`Caught the error! >>> ${e}`);
+	}
+});
 
-    console.log(`Source array: ${numbers}
+console.log(`Source array: ${numbers}
         Positive counter = ${positiveCount}
         Negative counter = ${negativeCount}
         Zero counter = ${zeroCount}`);

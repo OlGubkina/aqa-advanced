@@ -14,13 +14,19 @@
     Якщо середня оцінка від 91 до 100 (включно), вивести "Відмінно".
  */
 
-    let averageGrade = Math.ceil(Math.random() * 100 + 1);
-    console.log(`Average note = ${averageGrade}`);
+let averageGrade = Math.ceil(Math.random() * 100 + 1);
+console.log(`Average note = ${averageGrade}`);
 
-    if (averageGrade < 60) {console.log(`Insufficient`)}
-    else if (averageGrade >=60 && averageGrade<=70) {console.log(`Sufficient`)}
-    else if (averageGrade >70 && averageGrade<=80) {console.log(`Good`)}
-    else if (averageGrade >80 && averageGrade<=90) {console.log(`Very good`)}
-    else if (averageGrade >90 && averageGrade<=100) {console.log(`Excellent`)}
-    else console.log(`Error: averageGrade = ${averageGrade}`);
-
+if (averageGrade < 60) {
+	console.log("Insufficient");
+} else if (averageGrade >= 60 && averageGrade <= 70) {
+	console.log("Sufficient");
+} else if (averageGrade > 70 && averageGrade <= 80) {
+	console.log("Good");
+} else if (averageGrade > 80 && averageGrade <= 90) {
+	console.log("Very good");
+} else if (averageGrade > 90 && averageGrade <= 100) {
+	console.log("Excellent");
+} else {
+	console.log(`Error: averageGrade = ${averageGrade}`);
+}
